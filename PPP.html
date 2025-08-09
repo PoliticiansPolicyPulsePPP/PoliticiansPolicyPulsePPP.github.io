@@ -89,26 +89,26 @@
   </style>
 </head>
 <body>
-  <h1>🗳️ PPP - Politicians Policy Pulse</h1>
+  <h1>(VOTE) PPP - Politicians Policy Pulse</h1>
   <p>Rate politicians' actions using <strong>FREE daily votes</strong>. No money. No bias.</p>
   <p style="font-size: 14px; color: #666; margin-top: -10px;">Transparency through community-driven accountability</p>
   
   <div id="politicians-container">
     
     <div class="bill skeleton">
-      <h3>⟳ Loading active politicians...</h3>
+      <h3>Loading active politicians...</h3>
       <p><strong>...</strong> voted <span style="color: #f44336;">...</span> on ...</p>
       <p>...</p>
       <div style="display: flex; gap: 8px; margin: 15px 0;">
         <button disabled>No (0)</button>
         <button disabled>Yes (0)</button>
       </div>
-      <div class="threshold">⟳ Fetching accountability data</div>
+      <div class="threshold">Fetching accountability data</div>
     </div>
   </div>
 
   <div class="donation-section">
-    <h3>💡 Keep PPP Running</h3>
+    <h3>INFO: Keep PPP Running</h3>
     <p>We're <strong>100% independent</strong> — no ads, no corporate sponsors. 
        Donations cover <a href="https://www.digitalocean.com/pricing" target="_blank">server costs</a> only.</p>
     
@@ -119,7 +119,7 @@
     
     <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
       <div style="flex: 1; min-width: 120px; border: 1px solid #ddd; padding: 12px; border-radius: 6px;">
-        <p><strong>⚡ Quick Donate</strong></p>
+        <p><strong>QUICK DONATE</strong></p>
         <p style="font-size: 14px; color: #666;">Scan to send BTC:</p>
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=bc1q...w654"
              style="max-width: 100px; margin: 0 auto; display: block;">
@@ -129,7 +129,7 @@
       </div>
       
       <div style="flex: 1; min-width: 120px; border: 1px solid #ddd; padding: 12px; border-radius: 6px;">
-        <p><strong>🌐 Web3 Donate</strong></p>
+        <p><strong>WEB3 DONATE</strong></p>
         <button onclick="openDonationModal()"
                 style="background: var(--dark-olive); color: white; border: none; padding: 8px 12px; border-radius: 4px; width: 100%;">
           Connect Wallet
@@ -197,7 +197,7 @@
               <button onclick="vote('${voteId}', 'yes')">Yes (<span id="${voteId}">0</span>)</button>
             </div>
             
-            <div id="${thresholdId}" class="threshold">⚠️ 1000/1000 votes to auto-FOIA</div>
+            <div id="${thresholdId}" class="threshold">1000/1000 votes to auto-FOIA</div>
           </div>`;
         });
         
@@ -214,7 +214,7 @@
               <button onclick="vote('vote1', 'no')">No (0)</button>
               <button onclick="vote('vote1', 'yes')">Yes (<span id="vote1">0</span>)</button>
             </div>
-            <div id="threshold1" class="threshold">⚠️ 1000/1000 votes to auto-FOIA</div>
+            <div id="threshold1" class="threshold">1000/1000 votes to auto-FOIA</div>
           </div>
           
           <div class="bill">
@@ -225,7 +225,7 @@
               <button onclick="vote('vote2', 'no')">No (0)</button>
               <button onclick="vote('vote2', 'yes')">Yes (<span id="vote2">0</span>)</button>
             </div>
-            <div id="threshold2" class="threshold">⚠️ 1000/1000 votes to auto-FOIA</div>
+            <div id="threshold2" class="threshold">1000/1000 votes to auto-FOIA</div>
           </div>
           
           <div class="bill">
@@ -236,7 +236,7 @@
               <button onclick="vote('vote3', 'no')">No (0)</button>
               <button onclick="vote('vote3', 'yes')">Yes (<span id="vote3">0</span>)</button>
             </div>
-            <div id="threshold3" class="threshold">⚠️ 1000/1000 votes to auto-FOIA</div>
+            <div id="threshold3" class="threshold">1000/1000 votes to auto-FOIA</div>
           </div>
           
           <div class="bill">
@@ -247,7 +247,7 @@
               <button onclick="vote('vote4', 'no')">No (0)</button>
               <button onclick="vote('vote4', 'yes')">Yes (<span id="vote4">0</span>)</button>
             </div>
-            <div id="threshold4" class="threshold">⚠️ 1000/1000 votes to auto-FOIA</div>
+            <div id="threshold4" class="threshold">1000/1000 votes to auto-FOIA</div>
           </div>
           
           <div class="bill">
@@ -258,7 +258,7 @@
               <button onclick="vote('vote5', 'no')">No (0)</button>
               <button onclick="vote('vote5', 'yes')">Yes (<span id="vote5">0</span>)</button>
             </div>
-            <div id="threshold5" class="threshold">⚠️ 1000/1000 votes to auto-FOIA</div>
+            <div id="threshold5" class="threshold">1000/1000 votes to auto-FOIA</div>
           </div>
         `;
       }
@@ -274,9 +274,9 @@
         const thresholdEl = document.getElementById(thresholdId);
         
         if(count >= 1000) {
-          thresholdEl.innerHTML = '✅ <a href="https://www.muckrock.com/foia/request/" target="_blank">FOIA request filed</a>';
+          thresholdEl.innerHTML = 'FOIA request filed';
         } else {
-          thresholdEl.innerHTML = `⚠️ ${1000 - count}/1000 votes to auto-FOIA`;
+          thresholdEl.innerHTML = `${1000 - count}/1000 votes to auto-FOIA`;
         }
       }
     }
